@@ -1,9 +1,51 @@
-document.querySelectorAll('[data-service]').forEach(button=>button.addEventListener('click',()=>{document.getElementById('service').value=button.dataset.service;document.getElementById('orcamento').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});}));
-const form=document.getElementById('quote-form'),summary=document.getElementById('summary');form.addEventListener('submit',event=>{event.preventDefault();if(!form.reportValidity())return;const data=new FormData(form);summary.value=`PEDIDO DE ORÇAMENTO — GRÁFICA KRIAR\n\nNome: ${data.get('nome').trim()}\nServiço: ${data.get('servico')}\nQuantidade: ${data.get('quantidade')}\n\nDetalhes do projeto:\n${data.get('detalhes').trim()}`;document.getElementById('result').hidden=false;document.getElementById('copy-status').textContent='Pedido gerado. Copie ou baixe o resumo para compartilhar com a gráfica.';summary.focus();});
+document.querySelectorAll('[data-service]').forEach(button=>button.addEventListener('click',()=>{document.getElementById('service').value=button.dataset.service;document.getElementById('service').dispatchEvent(new Event('input',{bubbles:true}));document.getElementById('orcamento').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});}));
+const contacts = window.KRIAR_CONTACTS || {};
+const whatsappNumber = String(contacts.whatsapp || '').replace(/\D/g, '');
+const whatsappReady = /^55\d{10,11}$/.test(whatsappNumber);
+const form = document.getElementById('quote-form');
+const summary = document.getElementById('summary');
+const result = document.getElementById('result');
+const whatsappOrder = document.getElementById('whatsapp-order');
+form.addEventListener('input', () => {
+  result.hidden = true;
+  whatsappOrder.removeAttribute('href');
+  form.elements.nome.setCustomValidity('');
+});
+form.addEventListener('submit', event => {
+  event.preventDefault();
+  form.elements.nome.setCustomValidity(form.elements.nome.value.trim() ? '' : 'Preencha este campo.');
+  if (!form.reportValidity()) return;
+  const data = new FormData(form);
+  const lines = [
+    'PEDIDO DE ORÇAMENTO — GRÁFICA KRIAR', '',
+    `Nome: ${data.get('nome').trim()}`,
+    `Serviço: ${data.get('servico')}`,
+    `Quantidade: ${data.get('quantidade')}`
+  ];
+  const deadline = String(data.get('prazo') || '');
+  if (deadline) lines.push(`Prazo desejado: ${deadline.split('-').reverse().join('/')}`);
+  for (const [field, label] of [['medidas', 'Medidas'], ['arte', 'Arte'], ['recebimento', 'Recebimento']]) {
+    const value = String(data.get(field) || '').trim();
+    if (value) lines.push(`${label}: ${value}`);
+  }
+  const details = String(data.get('detalhes') || '').trim();
+  if (details) lines.push('', 'Detalhes do projeto:', details);
+  summary.value = lines.join('\n');
+  result.hidden = false;
+  if (!whatsappReady) {
+    whatsappOrder.hidden = true;
+    document.getElementById('copy-status').textContent = 'Pedido pronto. Copie ou baixe o resumo para compartilhar com a gráfica.';
+    return;
+  }
+  const destination = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(summary.value)}`;
+  whatsappOrder.href = destination;
+  whatsappOrder.hidden = false;
+  document.getElementById('copy-status').textContent = 'Pedido pronto! Confirme o envio no WhatsApp. Se ele não abrir, toque em “Abrir pedido no WhatsApp”.';
+  window.open(destination, '_blank', 'noopener,noreferrer');
+});
 document.getElementById('copy').addEventListener('click',async()=>{try{await navigator.clipboard.writeText(summary.value);document.getElementById('copy-status').textContent='Pedido copiado!'}catch{summary.focus();summary.select();document.getElementById('copy-status').textContent='Selecione o texto e use a opção copiar do seu dispositivo.'}});
-document.getElementById('download').addEventListener('click',()=>{const url=URL.createObjectURL(new Blob([summary.value],{type:'text/plain;charset=utf-8'})),a=document.createElement('a');a.href=url;a.download='pedido-orcamento-kriar.txt';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)});document.getElementById('year').textContent=new Date().getFullYear();
+document.getElementById('download').addEventListener('click',()=>{const url=URL.createObjectURL(new Blob([summary.value],{type:'text/plain;charset=utf-8'})),a=document.createElement('a');a.href=url;a.download='pedido-orcamento-kriar.txt';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)});
 
-form.addEventListener('submit',()=>{if(!form.checkValidity())return;const submitButton=form.querySelector('[type="submit"]');submitButton.classList.remove('is-generated');void submitButton.offsetWidth;submitButton.classList.add('is-generated');});
 
 
 (() => {
