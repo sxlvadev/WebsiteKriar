@@ -1,0 +1,8 @@
+Gráfica Kriar — atualizado em 22/11/2026
+
+Site pronto: pasta dist.
+Preview no VS Code: node scripts/preview.cjs
+Acesse http://127.0.0.1:4173/
+
+Recompilar estilos: npm install e npm run build.
+Mapa: aguardando link atualizado.

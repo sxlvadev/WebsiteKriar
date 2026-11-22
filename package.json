@@ -2,7 +2,10 @@
   "name": "grafica-kriar",
   "private": true,
   "scripts": {
-    "build": "tailwindcss -i ./src/input.css -o ./dist/style.css --minify"
+    "build": "tailwindcss -i ./src/input.css -o ./dist/style.css --minify",
+    "prepreview": "npm run build",
+    "preview": "node scripts/preview.cjs",
+    "watch:css": "tailwindcss -i ./src/input.css -o ./dist/style.css --watch"
   },
   "devDependencies": {
     "tailwindcss": "^4.3.0",

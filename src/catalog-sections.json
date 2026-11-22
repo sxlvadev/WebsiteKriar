@@ -1,0 +1,1721 @@
+{
+  "source": "Catalogo_2027_Grafica_Kriar_Revisado.pdf",
+  "categories": [
+    {
+      "name": "Papelaria comercial",
+      "description": "Materiais para apresentar a sua marca e apoiar o atendimento.",
+      "products": [
+        {
+          "title": "Cartões de Visita",
+          "page": 8,
+          "description": "Cartões de visita no formato 9 × 5 cm, com impressão apenas frente ou frente e verso.",
+          "headers": [
+            "Quantidade",
+            "Valor"
+          ],
+          "rows": [
+            [
+              "100 unidades",
+              "R$ 50,00"
+            ],
+            [
+              "250 unidades",
+              "R$ 110,00"
+            ],
+            [
+              "500 unidades",
+              "R$ 175,00"
+            ]
+          ],
+          "notes": [],
+          "pending": false,
+          "table_layout": "paired-by-production",
+          "table_heading": "Produção rápida · Apenas frente",
+          "extra_tables": [
+            {
+              "caption": "Produção rápida · Frente e verso",
+              "headers": [
+                "Quantidade",
+                "Valor"
+              ],
+              "rows": [
+                [
+                  "100 unidades",
+                  "R$ 80,00"
+                ],
+                [
+                  "250 unidades",
+                  "R$ 135,00"
+                ],
+                [
+                  "500 unidades",
+                  "R$ 199,00"
+                ]
+              ]
+            },
+            {
+              "caption": "Produção padrão · Apenas frente",
+              "headers": [
+                "Quantidade",
+                "Valor"
+              ],
+              "rows": [
+                [
+                  "1.000 unidades",
+                  "R$ 170,00"
+                ],
+                [
+                  "3.000 unidades",
+                  "R$ 420,00"
+                ],
+                [
+                  "5.000 unidades",
+                  "R$ 600,00"
+                ]
+              ]
+            },
+            {
+              "caption": "Produção padrão · Frente e verso",
+              "headers": [
+                "Quantidade",
+                "Valor"
+              ],
+              "rows": [
+                [
+                  "1.000 unidades",
+                  "R$ 190,00"
+                ],
+                [
+                  "3.000 unidades",
+                  "R$ 450,00"
+                ],
+                [
+                  "5.000 unidades",
+                  "R$ 650,00"
+                ]
+              ]
+            }
+          ],
+          "production_groups": [
+            {
+              "title": "Produção rápida",
+              "description": "1 a 2 dias úteis · Papel-cartão 250 g · Formato 9 × 5 cm.",
+              "tables": [
+                {
+                  "title": "Impressão apenas frente",
+                  "headers": [
+                    "Quantidade",
+                    "Valor"
+                  ],
+                  "rows": [
+                    [
+                      "100 unidades",
+                      "R$ 50,00"
+                    ],
+                    [
+                      "250 unidades",
+                      "R$ 110,00"
+                    ],
+                    [
+                      "500 unidades",
+                      "R$ 175,00"
+                    ]
+                  ]
+                },
+                {
+                  "title": "Impressão frente e verso",
+                  "headers": [
+                    "Quantidade",
+                    "Valor"
+                  ],
+                  "rows": [
+                    [
+                      "100 unidades",
+                      "R$ 80,00"
+                    ],
+                    [
+                      "250 unidades",
+                      "R$ 135,00"
+                    ],
+                    [
+                      "500 unidades",
+                      "R$ 199,00"
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Produção padrão",
+              "description": "7 a 10 dias úteis · Papel couché 250 g · Formato 9 × 5 cm · Verniz total na frente.",
+              "tables": [
+                {
+                  "title": "Impressão apenas frente",
+                  "headers": [
+                    "Quantidade",
+                    "Valor"
+                  ],
+                  "rows": [
+                    [
+                      "1.000 unidades",
+                      "R$ 170,00"
+                    ],
+                    [
+                      "3.000 unidades",
+                      "R$ 420,00"
+                    ],
+                    [
+                      "5.000 unidades",
+                      "R$ 600,00"
+                    ]
+                  ]
+                },
+                {
+                  "title": "Impressão frente e verso",
+                  "headers": [
+                    "Quantidade",
+                    "Valor"
+                  ],
+                  "rows": [
+                    [
+                      "1.000 unidades",
+                      "R$ 190,00"
+                    ],
+                    [
+                      "3.000 unidades",
+                      "R$ 450,00"
+                    ],
+                    [
+                      "5.000 unidades",
+                      "R$ 650,00"
+                    ]
+                  ]
+                }
+              ]
+            }
+          ],
+          "price_source": "Catálogo 2027 revisado"
+        },
+        {
+          "title": "Tags Personalizadas",
+          "page": 9,
+          "description": "Produção rápida: 1 a 2 dias úteis, em papel-cartão 250 g.",
+          "headers": [
+            "Quantidade",
+            "Valor"
+          ],
+          "rows": [
+            [
+              "100 unidades",
+              "R$ 65,00"
+            ],
+            [
+              "200 unidades",
+              "R$ 110,00"
+            ],
+            [
+              "300 unidades",
+              "R$ 130,00"
+            ]
+          ],
+          "notes": [],
+          "pending": false,
+          "table_heading": "Produção rápida · Grandes: 6 a 10 cm",
+          "extra_tables": [
+            {
+              "caption": "Produção rápida · Pequenas: 4 a 5 cm",
+              "headers": [
+                "Quantidade",
+                "Valor"
+              ],
+              "rows": [
+                [
+                  "200 unidades",
+                  "R$ 79,00"
+                ],
+                [
+                  "250 unidades",
+                  "R$ 109,00"
+                ],
+                [
+                  "500 unidades",
+                  "R$ 159,00"
+                ]
+              ]
+            },
+            {
+              "caption": "Produção padrão · Grandes: 6 a 10 cm",
+              "description": "Prazo: 7 a 10 dias úteis. Papel couché 250 g com verniz total na frente.",
+              "headers": [
+                "Quantidade",
+                "Valor"
+              ],
+              "rows": [
+                [
+                  "1.000 unidades",
+                  "R$ 290,00"
+                ],
+                [
+                  "2.000 unidades",
+                  "R$ 490,00"
+                ],
+                [
+                  "5.000 unidades",
+                  "R$ 990,00"
+                ]
+              ]
+            },
+            {
+              "caption": "Produção padrão · Pequenas: 4 a 5 cm",
+              "headers": [
+                "Quantidade",
+                "Valor"
+              ],
+              "rows": [
+                [
+                  "1.000 unidades",
+                  "R$ 269,00"
+                ],
+                [
+                  "2.000 unidades",
+                  "R$ 329,00"
+                ],
+                [
+                  "5.000 unidades",
+                  "R$ 649,00"
+                ]
+              ]
+            }
+          ],
+          "table_layout": "paired-by-production",
+          "production_groups": [
+            {
+              "title": "Produção rápida",
+              "description": "1 a 2 dias úteis · Papel-cartão 250 g.",
+              "tables": [
+                {
+                  "title": "Grandes: 6 a 10 cm",
+                  "headers": [
+                    "Quantidade",
+                    "Valor"
+                  ],
+                  "rows": [
+                    [
+                      "100 unidades",
+                      "R$ 65,00"
+                    ],
+                    [
+                      "200 unidades",
+                      "R$ 110,00"
+                    ],
+                    [
+                      "300 unidades",
+                      "R$ 130,00"
+                    ]
+                  ]
+                },
+                {
+                  "title": "Pequenas: 4 a 5 cm",
+                  "headers": [
+                    "Quantidade",
+                    "Valor"
+                  ],
+                  "rows": [
+                    [
+                      "200 unidades",
+                      "R$ 79,00"
+                    ],
+                    [
+                      "250 unidades",
+                      "R$ 109,00"
+                    ],
+                    [
+                      "500 unidades",
+                      "R$ 159,00"
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Produção padrão",
+              "description": "7 a 10 dias úteis · Papel couché 250 g com verniz total na frente.",
+              "tables": [
+                {
+                  "title": "Grandes: 6 a 10 cm",
+                  "headers": [
+                    "Quantidade",
+                    "Valor"
+                  ],
+                  "rows": [
+                    [
+                      "1.000 unidades",
+                      "R$ 290,00"
+                    ],
+                    [
+                      "2.000 unidades",
+                      "R$ 490,00"
+                    ],
+                    [
+                      "5.000 unidades",
+                      "R$ 990,00"
+                    ]
+                  ]
+                },
+                {
+                  "title": "Pequenas: 4 a 5 cm",
+                  "headers": [
+                    "Quantidade",
+                    "Valor"
+                  ],
+                  "rows": [
+                    [
+                      "1.000 unidades",
+                      "R$ 269,00"
+                    ],
+                    [
+                      "2.000 unidades",
+                      "R$ 329,00"
+                    ],
+                    [
+                      "5.000 unidades",
+                      "R$ 649,00"
+                    ]
+                  ]
+                }
+              ]
+            }
+          ],
+          "price_source": "Catálogo 2027 revisado"
+        },
+        {
+          "title": "Panfletos / Flyers",
+          "page": 10,
+          "headers": [
+            "Quantidade",
+            "Apenas frente"
+          ],
+          "rows": [
+            [
+              "100 unidades",
+              "R$ 80,00"
+            ],
+            [
+              "250 unidades",
+              "R$ 200,00"
+            ],
+            [
+              "500 unidades",
+              "R$ 235,00"
+            ]
+          ],
+          "description": "Formato 10 × 15 cm, com produção rápida ou padrão.",
+          "notes": [
+            "Arte e criação: + R$ 30,00.",
+            "Alteração e edição: + R$ 20,00.",
+            "Arte final não inclusa."
+          ],
+          "extra_tables": [
+            {
+              "caption": "Produção padrão: 7 a 10 dias úteis. Tamanho 10 × 15 cm.",
+              "headers": [
+                "Quantidade",
+                "Apenas frente",
+                "Frente e verso"
+              ],
+              "rows": [
+                [
+                  "1.000 unidades",
+                  "R$ 239,00",
+                  "R$ 270,00"
+                ],
+                [
+                  "2.500 unidades",
+                  "R$ 439,00",
+                  "R$ 460,00"
+                ],
+                [
+                  "5.000 unidades",
+                  "R$ 600,00",
+                  "R$ 650,00"
+                ]
+              ]
+            }
+          ],
+          "production_groups": [
+            {
+              "title": "Produção rápida",
+              "description": "1 a 2 dias úteis · Papel 90 g · Formato 10 × 15 cm · Impressão apenas frente.",
+              "tables": [
+                {
+                  "title": "Impressão apenas frente",
+                  "headers": [
+                    "Quantidade",
+                    "Valor"
+                  ],
+                  "rows": [
+                    [
+                      "100 unidades",
+                      "R$ 80,00"
+                    ],
+                    [
+                      "250 unidades",
+                      "R$ 200,00"
+                    ],
+                    [
+                      "500 unidades",
+                      "R$ 235,00"
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Produção padrão",
+              "description": "7 a 10 dias úteis · Papel couché 90 g · Formato 10 × 15 cm.",
+              "tables": [
+                {
+                  "title": "Impressão apenas frente",
+                  "headers": [
+                    "Quantidade",
+                    "Valor"
+                  ],
+                  "rows": [
+                    [
+                      "1.000 unidades",
+                      "R$ 239,00"
+                    ],
+                    [
+                      "2.500 unidades",
+                      "R$ 439,00"
+                    ],
+                    [
+                      "5.000 unidades",
+                      "R$ 600,00"
+                    ]
+                  ]
+                },
+                {
+                  "title": "Impressão frente e verso",
+                  "headers": [
+                    "Quantidade",
+                    "Valor"
+                  ],
+                  "rows": [
+                    [
+                      "1.000 unidades",
+                      "R$ 270,00"
+                    ],
+                    [
+                      "2.500 unidades",
+                      "R$ 460,00"
+                    ],
+                    [
+                      "5.000 unidades",
+                      "R$ 650,00"
+                    ]
+                  ]
+                }
+              ]
+            }
+          ],
+          "price_source": "Catálogo 2027 revisado"
+        },
+        {
+          "title": "Pastas com Orelha",
+          "page": 11,
+          "description": "",
+          "headers": [
+            "Quantidade",
+            "Valor"
+          ],
+          "rows": [
+            [
+              "A partir de 10 unidades",
+              "R$ 14,90"
+            ],
+            [
+              "A partir de 20 unidades",
+              "R$ 12,00"
+            ],
+            [
+              "A partir de 30 unidades",
+              "R$ 9,80"
+            ],
+            [
+              "A partir de 50 unidades",
+              "R$ 8,20"
+            ],
+            [
+              "A partir de 100 unidades",
+              "R$ 4,89"
+            ]
+          ],
+          "notes": [],
+          "price_source": "Catálogo 2027 revisado"
+        },
+        {
+          "title": "Receituários Personalizados",
+          "page": 12,
+          "headers": [
+            "Quantidade",
+            "Preto e branco",
+            "Colorido"
+          ],
+          "rows": [
+            [
+              "Mínimo 4 unidades",
+              "R$ 23,00",
+              "R$ 25,00"
+            ],
+            [
+              "A partir de 10 unidades",
+              "R$ 17,00",
+              "R$ 19,00"
+            ],
+            [
+              "A partir de 30 unidades",
+              "R$ 16,00",
+              "R$ 18,00"
+            ],
+            [
+              "A partir de 50 unidades",
+              "R$ 14,00",
+              "R$ 16,00"
+            ],
+            [
+              "A partir de 100 unidades",
+              "R$ 13,00",
+              "R$ 15,00"
+            ]
+          ],
+          "description": "Blocos de receituário A5 (14,8 × 21 cm), papel sulfite 75 g.",
+          "notes": [],
+          "extra_tables": [
+            {
+              "caption": "Papel timbrado A4 (21 × 29,7 cm)",
+              "headers": [
+                "Quantidade",
+                "Preto e branco",
+                "Colorido"
+              ],
+              "rows": [
+                [
+                  "100 folhas",
+                  "R$ 69,00",
+                  "R$ 79,00"
+                ],
+                [
+                  "200 folhas",
+                  "R$ 150,00",
+                  "R$ 160,00"
+                ],
+                [
+                  "300 folhas",
+                  "R$ 229,00",
+                  "R$ 239,00"
+                ],
+                [
+                  "500 folhas",
+                  "R$ 337,00",
+                  "R$ 347,00"
+                ],
+                [
+                  "1.000 folhas",
+                  "R$ 487,00",
+                  "R$ 497,00"
+                ]
+              ]
+            }
+          ],
+          "price_source": "Catálogo 2027 revisado"
+        },
+        {
+          "title": "Livretos e Cartilhas",
+          "page": 13,
+          "description": "Capa brilhante ou fosca.",
+          "headers": [
+            "Quantidade",
+            "Valor"
+          ],
+          "rows": [
+            [
+              "8 páginas + capa",
+              "R$ 5,90"
+            ],
+            [
+              "12 páginas + capa",
+              "R$ 6,90"
+            ],
+            [
+              "16 páginas + capa",
+              "R$ 7,90"
+            ],
+            [
+              "20 páginas + capa",
+              "R$ 8,90"
+            ],
+            [
+              "24 páginas + capa",
+              "R$ 9,90"
+            ],
+            [
+              "28 páginas + capa",
+              "R$ 10,90"
+            ],
+            [
+              "32 páginas + capa",
+              "R$ 11,90"
+            ]
+          ],
+          "notes": [
+            "Arte final não inclusa.",
+            "Alta cobertura de tinta: + R$ 0,10 por folha."
+          ],
+          "price_source": "Catálogo 2027 revisado"
+        },
+        {
+          "title": "Carteiras de Vacinação",
+          "page": 14,
+          "description": "",
+          "headers": [
+            "Quantidade",
+            "Valor"
+          ],
+          "rows": [
+            [
+              "50 unidades",
+              "R$ 69,90"
+            ],
+            [
+              "100 unidades",
+              "R$ 124,00"
+            ],
+            [
+              "250 unidades",
+              "R$ 310,00"
+            ],
+            [
+              "500 unidades",
+              "R$ 485,00"
+            ],
+            [
+              "1000 unidades",
+              "R$ 690,00"
+            ]
+          ],
+          "notes": [],
+          "price_source": "Catálogo 2027 revisado"
+        },
+        {
+          "title": "Cartões de Agradecimento",
+          "page": 15,
+          "description": "",
+          "headers": [
+            "Quantidade",
+            "Valor"
+          ],
+          "rows": [
+            [
+              "A partir de 100 unidades",
+              "R$ 59,00"
+            ],
+            [
+              "A partir de 200 unidades",
+              "R$ 85,00"
+            ],
+            [
+              "A partir de 300 unidades",
+              "R$ 125,00"
+            ],
+            [
+              "A partir de 500 unidades",
+              "R$ 150,00"
+            ],
+            [
+              "A partir de 1000 unidades",
+              "R$ 180,00"
+            ]
+          ],
+          "notes": [],
+          "price_source": "Catálogo 2027 revisado"
+        }
+      ]
+    },
+    {
+      "name": "Blocos e talões",
+      "description": "Organização, registros e materiais para suas ações.",
+      "products": [
+        {
+          "title": "Blocos e Talões",
+          "page": 16,
+          "description": "Blocos e talões 10 × 15 cm",
+          "headers": [
+            "Quantidade",
+            "Valor unitário",
+            "Valor total"
+          ],
+          "rows": [
+            [
+              "4 unidades",
+              "R$ 18,75",
+              "R$ 75,00"
+            ],
+            [
+              "12 unidades",
+              "R$ 10,80",
+              "R$ 129,60"
+            ],
+            [
+              "24 unidades",
+              "R$ 9,10",
+              "R$ 218,40"
+            ]
+          ],
+          "notes": [
+            "Criação de arte: + R$ 20,00.",
+            "Serrilha: + 15% do valor total.",
+            "Numeração: + 15% do valor total.",
+            "Numeração com serrilha: + 20%."
+          ],
+          "pending": false,
+          "price_source": "Referência enviada pelo usuário em 22/11/2026",
+          "extra_tables": [
+            {
+              "caption": "Blocos e talões 10 × 21 cm",
+              "headers": [
+                "Quantidade",
+                "Valor unitário",
+                "Valor total"
+              ],
+              "rows": [
+                [
+                  "4 unidades",
+                  "R$ 22,00",
+                  "R$ 88,00"
+                ],
+                [
+                  "12 unidades",
+                  "R$ 15,00",
+                  "R$ 180,00"
+                ],
+                [
+                  "24 unidades",
+                  "R$ 12,50",
+                  "R$ 300,00"
+                ]
+              ]
+            },
+            {
+              "caption": "Blocos e talões 15 × 21 cm",
+              "headers": [
+                "Quantidade",
+                "Valor unitário",
+                "Valor total"
+              ],
+              "rows": [
+                [
+                  "4 unidades",
+                  "R$ 25,00",
+                  "R$ 100,00"
+                ],
+                [
+                  "12 unidades",
+                  "R$ 20,00",
+                  "R$ 240,00"
+                ],
+                [
+                  "24 unidades",
+                  "R$ 17,50",
+                  "R$ 420,00"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Blocos de Rifas",
+          "page": 17,
+          "description": "Blocos de rifas 20 × 5 cm",
+          "headers": [
+            "Quantidade",
+            "Valor"
+          ],
+          "rows": [
+            [
+              "200 folhas",
+              "R$ 69,90"
+            ],
+            [
+              "500 folhas",
+              "R$ 179,00"
+            ],
+            [
+              "1.000 folhas",
+              "R$ 310,00"
+            ],
+            [
+              "2.000 folhas",
+              "R$ 485,00"
+            ]
+          ],
+          "notes": [],
+          "pending": false,
+          "price_source": "Referência enviada pelo usuário em 22/11/2026"
+        }
+      ]
+    },
+    {
+      "name": "Identificação",
+      "description": "Identificação para empresas, escolas e eventos.",
+      "products": [
+        {
+          "title": "Crachás Personalizados",
+          "page": 18,
+          "description": "Cordão liso (sem personalizar)",
+          "headers": [
+            "Quantidade",
+            "Valor unitário",
+            "Valor total"
+          ],
+          "rows": [
+            [
+              "5 unidades",
+              "R$ 20,00",
+              "R$ 100,00"
+            ],
+            [
+              "10 unidades",
+              "R$ 17,50",
+              "R$ 175,00"
+            ],
+            [
+              "20 unidades",
+              "R$ 15,50",
+              "R$ 310,00"
+            ],
+            [
+              "30 unidades",
+              "R$ 14,75",
+              "R$ 442,50"
+            ],
+            [
+              "50 unidades",
+              "R$ 10,00",
+              "R$ 500,00"
+            ],
+            [
+              "100 unidades",
+              "R$ 8,50",
+              "R$ 850,00"
+            ],
+            [
+              "500 unidades",
+              "R$ 7,90",
+              "R$ 3.950,00"
+            ]
+          ],
+          "notes": [],
+          "pending": false,
+          "price_source": "Referências enviadas pelo usuário em 22/11/2026",
+          "extra_tables": [
+            {
+              "caption": "Cordão personalizado",
+              "headers": [
+                "Quantidade",
+                "Valor unitário",
+                "Valor total"
+              ],
+              "rows": [
+                [
+                  "5 unidades",
+                  "R$ 40,00",
+                  "R$ 200,00"
+                ],
+                [
+                  "10 unidades",
+                  "R$ 30,00",
+                  "R$ 300,00"
+                ],
+                [
+                  "20 unidades",
+                  "R$ 27,50",
+                  "R$ 550,00"
+                ],
+                [
+                  "30 unidades",
+                  "R$ 25,00",
+                  "R$ 750,00"
+                ],
+                [
+                  "50 unidades",
+                  "R$ 22,00",
+                  "R$ 1.100,00"
+                ],
+                [
+                  "100 unidades",
+                  "R$ 19,00",
+                  "R$ 1.900,00"
+                ],
+                [
+                  "500 unidades",
+                  "R$ 17,50",
+                  "R$ 8.750,00"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Credenciais",
+          "page": 19,
+          "description": "Cordão liso (sem personalizar)",
+          "headers": [
+            "Quantidade",
+            "Valor unitário",
+            "Valor total"
+          ],
+          "rows": [
+            [
+              "5 unidades",
+              "R$ 20,00",
+              "R$ 100,00"
+            ],
+            [
+              "10 unidades",
+              "R$ 17,50",
+              "R$ 175,00"
+            ],
+            [
+              "20 unidades",
+              "R$ 15,50",
+              "R$ 310,00"
+            ],
+            [
+              "30 unidades",
+              "R$ 14,75",
+              "R$ 442,50"
+            ],
+            [
+              "50 unidades",
+              "R$ 10,00",
+              "R$ 500,00"
+            ],
+            [
+              "100 unidades",
+              "R$ 8,50",
+              "R$ 850,00"
+            ],
+            [
+              "500 unidades",
+              "R$ 7,90",
+              "R$ 3.950,00"
+            ]
+          ],
+          "notes": [],
+          "pending": false,
+          "price_source": "Referências enviadas pelo usuário em 22/11/2026",
+          "extra_tables": [
+            {
+              "caption": "Cordão personalizado",
+              "headers": [
+                "Quantidade",
+                "Valor unitário",
+                "Valor total"
+              ],
+              "rows": [
+                [
+                  "5 unidades",
+                  "R$ 40,00",
+                  "R$ 200,00"
+                ],
+                [
+                  "10 unidades",
+                  "R$ 30,00",
+                  "R$ 300,00"
+                ],
+                [
+                  "20 unidades",
+                  "R$ 27,50",
+                  "R$ 550,00"
+                ],
+                [
+                  "30 unidades",
+                  "R$ 25,00",
+                  "R$ 750,00"
+                ],
+                [
+                  "50 unidades",
+                  "R$ 22,00",
+                  "R$ 1.100,00"
+                ],
+                [
+                  "100 unidades",
+                  "R$ 19,00",
+                  "R$ 1.900,00"
+                ],
+                [
+                  "500 unidades",
+                  "R$ 17,50",
+                  "R$ 8.750,00"
+                ]
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Brindes personalizados",
+      "description": "Produtos personalizados para presentear e divulgar sua marca.",
+      "products": [
+        {
+          "title": "Bottons / Broches",
+          "page": 20,
+          "description": "",
+          "headers": [
+            "Quantidade",
+            "Valor"
+          ],
+          "rows": [
+            [
+              "Quantidade sob consulta",
+              "R$ 15,00"
+            ],
+            [
+              "A partir de 10 unidades",
+              "R$ 7,50"
+            ],
+            [
+              "A partir de 30 unidades",
+              "R$ 4,00"
+            ],
+            [
+              "A partir de 50 unidades",
+              "R$ 3,00"
+            ],
+            [
+              "A partir de 100 unidades",
+              "R$ 2,50"
+            ]
+          ],
+          "notes": [],
+          "price_source": "Catálogo 2027 revisado"
+        },
+        {
+          "title": "Canecas Personalizadas",
+          "page": 21,
+          "description": "",
+          "headers": [
+            "Quantidade",
+            "Valor"
+          ],
+          "rows": [
+            [
+              "Unidade avulsa",
+              "R$ 35,00"
+            ],
+            [
+              "A partir de 10 unidades",
+              "R$ 28,00"
+            ],
+            [
+              "A partir de 30 unidades",
+              "R$ 25,00"
+            ],
+            [
+              "A partir de 50 unidades",
+              "R$ 22,50"
+            ],
+            [
+              "A partir de 100 unidades",
+              "R$ 19,00"
+            ]
+          ],
+          "notes": [],
+          "price_source": "Catálogo 2027 revisado"
+        },
+        {
+          "title": "Marca-páginas",
+          "page": 22,
+          "description": "",
+          "headers": [
+            "Quantidade",
+            "Valor"
+          ],
+          "rows": [
+            [
+              "50 unidades",
+              "R$ 69,00"
+            ],
+            [
+              "A partir de 100 unidades",
+              "R$ 113,50"
+            ],
+            [
+              "A partir de 300 unidades",
+              "R$ 290,00"
+            ],
+            [
+              "A partir de 500 unidades",
+              "R$ 397,00"
+            ],
+            [
+              "A partir de 1.000 unidades",
+              "R$ 490,00"
+            ]
+          ],
+          "notes": [],
+          "price_source": "Catálogo 2027 revisado"
+        },
+        {
+          "title": "Ímãs de Geladeira",
+          "page": 23,
+          "description": "Ímã com excelente fixação.",
+          "headers": [
+            "Quantidade",
+            "Valor"
+          ],
+          "rows": [
+            [
+              "50 unidades",
+              "R$ 69,90"
+            ],
+            [
+              "A partir de 100 unidades",
+              "R$ 119,90"
+            ],
+            [
+              "A partir de 200 unidades",
+              "R$ 199,90"
+            ],
+            [
+              "A partir de 500 unidades",
+              "R$ 379,90"
+            ],
+            [
+              "A partir de 1.000 unidades",
+              "R$ 490,00"
+            ]
+          ],
+          "notes": [],
+          "price_source": "Catálogo 2027 revisado"
+        }
+      ]
+    },
+    {
+      "name": "Cardápios",
+      "description": "Opções para restaurantes, bares, lanchonetes e pizzarias.",
+      "products": [
+        {
+          "title": "Cardápios Plastificados",
+          "page": 24,
+          "description": "Plastificação resistente para cardápios.",
+          "headers": [
+            "Quantidade",
+            "Valor"
+          ],
+          "rows": [
+            [
+              "5 unidades",
+              "R$ 20,00"
+            ],
+            [
+              "A partir de 10 unidades",
+              "R$ 15,00"
+            ],
+            [
+              "A partir de 30 unidades",
+              "R$ 12,00"
+            ],
+            [
+              "A partir de 50 unidades",
+              "R$ 10,00"
+            ],
+            [
+              "A partir de 100 unidades",
+              "R$ 7,50"
+            ]
+          ],
+          "notes": [
+            "Arte final não inclusa.",
+            "Encadernação em espiral: + R$ 7,00 por cardápio."
+          ],
+          "price_source": "Catálogo 2027 revisado"
+        },
+        {
+          "title": "Cardápios em PVC",
+          "page": 25,
+          "description": "Cardápios em PVC resistente.",
+          "headers": [
+            "Quantidade",
+            "Valor"
+          ],
+          "rows": [
+            [
+              "5 unidades",
+              "R$ 40,00"
+            ],
+            [
+              "A partir de 10 unidades",
+              "R$ 30,00"
+            ],
+            [
+              "A partir de 30 unidades",
+              "R$ 25,00"
+            ],
+            [
+              "A partir de 50 unidades",
+              "R$ 22,00"
+            ],
+            [
+              "A partir de 100 unidades",
+              "R$ 20,50"
+            ]
+          ],
+          "notes": [
+            "Arte final não inclusa.",
+            "Encadernação em espiral: + R$ 7,00 por cardápio.",
+            "Cantos arredondados: + R$ 3,00 por cardápio."
+          ],
+          "price_source": "Catálogo 2027 revisado"
+        }
+      ]
+    },
+    {
+      "name": "Papelaria personalizada",
+      "description": "Cadernos, agendas, blocos e etiquetas para a sua rotina.",
+      "products": [
+        {
+          "title": "Cadernos Capa Dura",
+          "page": 26,
+          "description": "90 folhas pautadas e fechamento em arame de aço.",
+          "headers": [
+            "Quantidade",
+            "Valor"
+          ],
+          "rows": [
+            [
+              "1 unidade",
+              "R$ 60,00"
+            ],
+            [
+              "A partir de 10 unidades",
+              "R$ 45,00"
+            ],
+            [
+              "A partir de 30 unidades",
+              "R$ 40,00"
+            ],
+            [
+              "A partir de 50 unidades",
+              "R$ 35,00"
+            ],
+            [
+              "A partir de 100 unidades",
+              "R$ 30,00"
+            ]
+          ],
+          "notes": [],
+          "price_source": "Catálogo 2027 revisado"
+        },
+        {
+          "title": "Agendas Personalizadas",
+          "page": 27,
+          "description": "",
+          "headers": [
+            "Quantidade",
+            "Valor"
+          ],
+          "rows": [
+            [
+              "Quantidade sob consulta",
+              "R$ 79,90"
+            ],
+            [
+              "A partir de 10 unidades",
+              "R$ 59,90"
+            ],
+            [
+              "A partir de 30 unidades",
+              "R$ 54,00"
+            ],
+            [
+              "A partir de 50 unidades",
+              "R$ 49,90"
+            ],
+            [
+              "A partir de 100 unidades",
+              "R$ 39,00"
+            ]
+          ],
+          "notes": [],
+          "price_source": "Catálogo 2027 revisado"
+        },
+        {
+          "title": "Blocos e Cadernetas",
+          "page": 28,
+          "headers": [
+            "Quantidade",
+            "Valor",
+            "Valor total"
+          ],
+          "rows": [
+            [
+              "5 unidades",
+              "R$ 20,00",
+              "R$ 100,00"
+            ],
+            [
+              "10 unidades",
+              "R$ 16,50",
+              "R$ 165,00"
+            ],
+            [
+              "20 unidades",
+              "R$ 12,40",
+              "R$ 248,00"
+            ],
+            [
+              "30 unidades",
+              "R$ 11,00",
+              "R$ 330,00"
+            ],
+            [
+              "50 unidades",
+              "R$ 9,25",
+              "R$ 462,50"
+            ],
+            [
+              "100 unidades",
+              "R$ 8,00",
+              "R$ 800,00"
+            ],
+            [
+              "500 unidades",
+              "R$ 7,00",
+              "R$ 3.500,00"
+            ],
+            [
+              "1000 unidades",
+              "R$ 6,75",
+              "R$ 6.750,00"
+            ]
+          ],
+          "description": "",
+          "notes": [],
+          "price_source": "Catálogo 2027 revisado"
+        },
+        {
+          "title": "Etiquetas Escolares",
+          "page": 29,
+          "headers": [
+            "Kit",
+            "Valor"
+          ],
+          "rows": [
+            [
+              "8 G + 10 M + 12 P + 55 PP",
+              "R$ 25,90"
+            ],
+            [
+              "16 G + 20 M + 24 P + 105 PP",
+              "R$ 35,90"
+            ],
+            [
+              "26 G + 30 M + 36 P + 158 PP",
+              "R$ 45,90"
+            ]
+          ],
+          "description": "",
+          "notes": [],
+          "price_source": "Catálogo 2027 revisado"
+        }
+      ]
+    },
+    {
+      "name": "Calendários",
+      "description": "Opções para parede, mesa e divulgação da sua marca.",
+      "products": [
+        {
+          "title": "Calendários de Parede",
+          "page": 30,
+          "headers": [
+            "Quantidade",
+            "Valor",
+            "Valor total"
+          ],
+          "rows": [
+            [
+              "10 unidades",
+              "R$ 4,90",
+              "R$ 49,00"
+            ],
+            [
+              "20 unidades",
+              "R$ 3,90",
+              "R$ 78,00"
+            ],
+            [
+              "30 unidades",
+              "R$ 3,26",
+              "R$ 97,80"
+            ],
+            [
+              "50 unidades",
+              "R$ 3,10",
+              "R$ 155,00"
+            ],
+            [
+              "100 unidades",
+              "R$ 2,90",
+              "R$ 290,00"
+            ],
+            [
+              "500 unidades",
+              "R$ 2,56",
+              "R$ 1.280,00"
+            ],
+            [
+              "1000 unidades",
+              "R$ 1,89",
+              "R$ 1.890,00"
+            ]
+          ],
+          "description": "",
+          "notes": [],
+          "price_source": "Catálogo 2027 revisado"
+        },
+        {
+          "title": "Calendários de Parede Grandes",
+          "page": 31,
+          "headers": [
+            "Quantidade",
+            "Valor",
+            "Valor total"
+          ],
+          "rows": [
+            [
+              "10 unidades",
+              "R$ 6,90",
+              "R$ 69,00"
+            ],
+            [
+              "20 unidades",
+              "R$ 5,90",
+              "R$ 118,00"
+            ],
+            [
+              "30 unidades",
+              "R$ 5,26",
+              "R$ 157,80"
+            ],
+            [
+              "50 unidades",
+              "R$ 5,10",
+              "R$ 255,00"
+            ],
+            [
+              "100 unidades",
+              "R$ 4,90",
+              "R$ 490,00"
+            ],
+            [
+              "500 unidades",
+              "R$ 4,56",
+              "R$ 2.280,00"
+            ],
+            [
+              "1000 unidades",
+              "R$ 2,89",
+              "R$ 2.890,00"
+            ]
+          ],
+          "description": "",
+          "notes": [],
+          "price_source": "Catálogo 2027 revisado"
+        },
+        {
+          "title": "Calendários de Destaque",
+          "page": 32,
+          "headers": [
+            "Quantidade",
+            "Valor",
+            "Valor total"
+          ],
+          "rows": [
+            [
+              "10 unidades",
+              "R$ 7,90",
+              "R$ 79,00"
+            ],
+            [
+              "20 unidades",
+              "R$ 5,85",
+              "R$ 117,00"
+            ],
+            [
+              "30 unidades",
+              "R$ 5,26",
+              "R$ 157,80"
+            ],
+            [
+              "50 unidades",
+              "R$ 4,98",
+              "R$ 249,00"
+            ],
+            [
+              "100 unidades",
+              "R$ 4,79",
+              "R$ 479,00"
+            ],
+            [
+              "500 unidades",
+              "R$ 4,29",
+              "R$ 2.145,00"
+            ],
+            [
+              "1000 unidades",
+              "R$ 3,69",
+              "R$ 3.690,00"
+            ]
+          ],
+          "description": "",
+          "notes": [],
+          "price_source": "Catálogo 2027 revisado"
+        },
+        {
+          "title": "Calendários de Mesa Triangulares",
+          "page": 33,
+          "headers": [
+            "Quantidade",
+            "Valor",
+            "Valor total"
+          ],
+          "rows": [
+            [
+              "10 unidades",
+              "R$ 6,97",
+              "R$ 69,70"
+            ],
+            [
+              "20 unidades",
+              "R$ 5,90",
+              "R$ 118,00"
+            ],
+            [
+              "30 unidades",
+              "R$ 3,97",
+              "R$ 119,10"
+            ],
+            [
+              "50 unidades",
+              "R$ 3,80",
+              "R$ 190,00"
+            ],
+            [
+              "100 unidades",
+              "R$ 3,67",
+              "R$ 367,00"
+            ],
+            [
+              "500 unidades",
+              "R$ 3,25",
+              "R$ 1.625,00"
+            ],
+            [
+              "1000 unidades",
+              "R$ 2,58",
+              "R$ 2.580,00"
+            ]
+          ],
+          "description": "",
+          "notes": [],
+          "price_source": "Catálogo 2027 revisado"
+        },
+        {
+          "title": "Calendários de Mesa Wire-O",
+          "page": 34,
+          "headers": [
+            "Quantidade",
+            "Valor",
+            "Valor total"
+          ],
+          "rows": [
+            [
+              "10 unidades",
+              "R$ 19,90",
+              "R$ 199,00"
+            ],
+            [
+              "20 unidades",
+              "R$ 16,90",
+              "R$ 338,00"
+            ],
+            [
+              "30 unidades",
+              "R$ 15,80",
+              "R$ 474,00"
+            ],
+            [
+              "50 unidades",
+              "R$ 14,90",
+              "R$ 745,00"
+            ],
+            [
+              "100 unidades",
+              "R$ 11,89",
+              "R$ 1.189,00"
+            ],
+            [
+              "500 unidades",
+              "R$ 9,98",
+              "R$ 4.990,00"
+            ],
+            [
+              "1000 unidades",
+              "R$ 6,97",
+              "R$ 6.970,00"
+            ]
+          ],
+          "description": "",
+          "notes": [],
+          "price_source": "Catálogo 2027 revisado"
+        },
+        {
+          "title": "Ímãs com Calendário",
+          "page": 35,
+          "description": "Ímã com excelente fixação, embalado individualmente.",
+          "headers": [
+            "Quantidade",
+            "Valor"
+          ],
+          "rows": [
+            [
+              "A partir de 20 unidades",
+              "R$ 3,00"
+            ],
+            [
+              "A partir de 30 unidades",
+              "R$ 2,89"
+            ],
+            [
+              "A partir de 50 unidades",
+              "R$ 2,50"
+            ],
+            [
+              "A partir de 100 unidades",
+              "R$ 2,00"
+            ],
+            [
+              "A partir de 500 unidades",
+              "R$ 1,15"
+            ]
+          ],
+          "notes": [],
+          "price_source": "Catálogo 2027 revisado"
+        }
+      ]
+    }
+  ]
+}

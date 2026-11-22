@@ -1,0 +1,32 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Kriar: visualizar site",
+      "type": "shell",
+      "command": "node",
+      "args": [
+        "scripts/preview.cjs"
+      ],
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated"
+      }
+    },
+    {
+      "label": "Kriar: acompanhar CSS",
+      "type": "shell",
+      "command": "npm.cmd",
+      "args": [
+        "run",
+        "watch:css"
+      ],
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated"
+      }
+    }
+  ]
+}
