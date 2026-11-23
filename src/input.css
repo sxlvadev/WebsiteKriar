@@ -790,6 +790,11 @@
 
 @layer components {
   .catalog-finishing { display: grid; gap: 1.25rem; }
+  .catalog-finishing > .catalog-category-card:nth-child(3n + 1) { --category-accent: var(--cyan); }
+  .catalog-finishing > .catalog-category-card:nth-child(3n + 2) { --category-accent: var(--pink); }
+  .catalog-finishing > .catalog-category-card:nth-child(3n) { --category-accent: var(--yellow); }
+  .catalog-category-summary h2 { color: var(--category-accent, var(--cyan)); }
+  .catalog-category-card > .catalog-category-summary:hover .catalog-expand-hint { color: var(--category-accent, var(--cyan)); }
   .catalog-category-card .catalog-category-icon, .catalog-category-card .catalog-expand-hint { color: var(--category-accent, var(--cyan)); }
   .catalog-category-card > .catalog-category-summary > .catalog-expand-icon { color: var(--category-accent, var(--yellow)); }
   .catalog-price-subheading { font-family: Manrope, Arial, sans-serif; font-size: 1rem; font-weight: 600; line-height: 1.6; color: var(--card-accent, var(--cyan)); margin: 2rem 0 1rem; }
@@ -830,4 +835,22 @@
     [data-catalog-commercial] .catalog-price-table th,
     [data-catalog-commercial] .catalog-price-table td { padding: .75rem .5rem; }
   }
+}
+
+@layer components {
+  .home-catalog { display: grid; grid-template-columns: 1.1fr 1fr; align-items: center; gap: 4rem; padding-top: 3rem; padding-bottom: 4rem; }
+  .home-catalog h2 { font-size: clamp(2.25rem, 4vw, 3.75rem); line-height: 1.12; letter-spacing: -.045em; margin: 0; }
+  .home-catalog h2 span { color: var(--yellow); }
+  .home-catalog-copy { max-width: 31rem; }
+  .home-catalog-copy p { color: #b8b8bf; font-size: 1rem; line-height: 1.8; margin: 0 0 1.25rem; }
+  .home-catalog-link { --card-accent: var(--yellow); display: inline-flex; align-items: center; gap: .75rem; min-height: 48px; padding: .75rem 0; font-size: 1rem; font-weight: 600; color: #f7f7f8; }
+  .home-catalog-link::after { left: 0; right: 0; }
+  .catalog-highlight-button { display: inline-flex; align-items: center; justify-content: center; gap: .8rem; min-height: 54px; padding: 1rem 1.5rem; font-weight: 700; }
+  .catalog-highlight-button svg { flex: 0 0 auto; transition: transform .25s ease; }
+  .hero-services-button { background: transparent; color: #f7f7f8; }
+  .hero-services-button::after { left: 1rem; right: 1rem; }
+  @media (hover: hover) { .catalog-highlight-button:hover svg { transform: translateX(4px); } }
+  .catalog-highlight-button:focus-visible svg { transform: translateX(4px); }
+  @media (prefers-reduced-motion: reduce) { .catalog-highlight-button svg { transition: none; } .catalog-highlight-button:hover svg, .catalog-highlight-button:focus-visible svg { transform: none; } }
+  @media (max-width: 700px) { .home-catalog { grid-template-columns: 1fr; gap: 1.5rem; padding-top: 1.5rem; padding-bottom: 3rem; } }
 }

@@ -1,8 +1,11 @@
-Gráfica Kriar — atualizado em 22/11/2026
+Gráfica Kriar - versão atualizada em 22/11/2026
 
-Site pronto: pasta dist.
-Preview no VS Code: node scripts/preview.cjs
+Os arquivos prontos do site estão em dist.
+Para visualizar localmente, abra esta pasta no VS Code e execute:
+node scripts/preview.cjs
 Acesse http://127.0.0.1:4173/
 
-Recompilar estilos: npm install e npm run build.
-Mapa: aguardando link atualizado.
+Para recompilar os estilos: npm install e npm run build.
+
+Inclui os ajustes mais recentes da homepage, dos botões e das cores do catálogo.
+O mapa permanece com a localização anterior, aguardando o link atualizado.
