@@ -1,0 +1,91 @@
+.book-analyzer {
+  --analyzer-panel: #111113;
+  --analyzer-field: #19191e;
+  --analyzer-line: #38383f;
+  --analyzer-muted: #b8b8bf;
+  color-scheme: dark;
+  width: min(1120px, calc(100% - 40px));
+  margin-inline: auto;
+  padding-bottom: 3rem;
+}
+
+.book-analyzer [hidden] { display: none !important; }
+.book-analyzer .intro { padding-block: clamp(2rem, 6vw, 4.5rem) 2rem; }
+.book-analyzer .analyzer-back { display: inline-block; margin-bottom: 1rem; color: var(--cyan); text-decoration: underline; text-underline-offset: .25em; }
+.book-analyzer h1, .book-analyzer h2 { color: #f7f7f8; font-family: "Manrope", sans-serif; font-weight: 800; word-spacing: normal; }
+.book-analyzer h1 { font-size: clamp(2.25rem, 6vw, 4rem); line-height: 1.08; letter-spacing: -.045em; }
+.book-analyzer h2 { font-size: 1.3rem; letter-spacing: -.025em; }
+.book-analyzer h3 { font-size: 1rem; font-weight: 700; letter-spacing: normal; }
+.book-analyzer .intro p { margin-top: .75rem; color: var(--analyzer-muted); }
+.book-analyzer .workspace { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.25rem; }
+.book-analyzer .panel { min-width: 0; padding: clamp(1rem, 3vw, 1.5rem); background: var(--analyzer-panel); border: 1px solid var(--analyzer-line); border-radius: 1.25rem; }
+.book-analyzer .muted, .book-analyzer .analysis-note, .book-analyzer .metrics small { color: var(--analyzer-muted); font-size: .875rem; }
+
+.book-analyzer .dropzone {
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  gap: .5rem;
+  min-height: 224px;
+  margin-top: 1rem;
+  padding: 1rem;
+  border: 1px dashed #6a6a75;
+  border-radius: .85rem;
+  background: var(--analyzer-field);
+  text-align: center;
+}
+.book-analyzer .dropzone[data-dragging] { background: #14242b; border-color: var(--cyan); }
+.book-analyzer .file-mark { display: grid; place-items: center; width: 3rem; height: 3.25rem; border-radius: .5rem; background: #202e37; color: var(--cyan); font-size: .875rem; font-weight: 800; }
+.book-analyzer #file-name { max-width: 100%; overflow-wrap: anywhere; font-weight: 700; }
+.book-analyzer .privacy, .book-analyzer .print-note { margin-top: .75rem; }
+.book-analyzer .print-panel form { margin: 0; padding: 0; border: 0; background: transparent; box-shadow: none; }
+.book-analyzer .fields { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); gap: 1rem .75rem; margin-top: 1rem; }
+.book-analyzer label { display: grid; gap: .375rem; min-width: 0; margin: 0; font-size: .875rem; font-weight: 700; }
+.book-analyzer select, .book-analyzer input { width: 100%; min-width: 0; min-height: 44px; padding: .5rem .625rem; border: 1px solid var(--analyzer-line); border-radius: .5rem; background: var(--analyzer-field); color: #f7f7f8; font: inherit; font-weight: 400; }
+.book-analyzer select { appearance: auto; }
+.book-analyzer .fields label:nth-child(2) select { min-width: 4.5rem; }
+.book-analyzer button { min-height: 44px; padding: .5rem .875rem; border: 1px solid #65656e; border-radius: .5rem; background: #1c1c20; color: #f7f7f8; font-size: .875rem; font-weight: 700; cursor: pointer; }
+.book-analyzer button:hover:not(:disabled) { background: #2c2c33; }
+.book-analyzer button:disabled { opacity: .55; cursor: default; }
+.book-analyzer :focus-visible { outline: 2px solid var(--cyan); outline-offset: 3px; }
+.book-analyzer .primary { border-color: var(--yellow); background: var(--yellow); color: #111; }
+.book-analyzer .primary:hover:not(:disabled) { background: #ffe851; }
+.book-analyzer .quiet { background: transparent; border-color: transparent; }
+.book-analyzer .actions { display: flex; flex-wrap: wrap; gap: .5rem; justify-content: center; }
+.book-analyzer .print-panel form > button { margin-top: 1rem; }
+.book-analyzer #quantity-note { margin-top: .375rem; }
+
+.book-analyzer .notice { margin-top: 1.25rem; padding: .875rem 1rem; background: var(--analyzer-panel); border: 1px solid var(--analyzer-line); border-radius: .75rem; }
+.book-analyzer .notice[data-error] { border-color: #9a3c61; color: #ffc0d3; }
+.book-analyzer .notice button, .book-analyzer progress { margin-top: .625rem; }
+.book-analyzer progress { display: block; width: 100%; accent-color: var(--cyan); }
+.book-analyzer .result { margin-top: 1.25rem; }
+.book-analyzer .section-head, .book-analyzer .summary-bottom { display: flex; justify-content: space-between; align-items: flex-start; gap: 1.25rem; flex-wrap: wrap; margin-bottom: 1rem; }
+.book-analyzer .section-head p, .book-analyzer #applied { margin-top: .375rem; }
+.book-analyzer .metrics { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(145px, 100%), 1fr)); gap: .5rem; margin: 1rem 0; }
+.book-analyzer .metrics > div { display: grid; gap: .25rem; align-content: start; padding: .75rem; border-radius: .5rem; background: var(--analyzer-field); font-size: .875rem; }
+.book-analyzer .metrics strong { font-size: 1.2rem; overflow-wrap: anywhere; }
+.book-analyzer .metrics .total { background: var(--yellow); color: #111; }
+.book-analyzer .summary-bottom > div:last-child { width: min(100%, 285px); }
+.book-analyzer .distribution { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: .5rem; list-style: none; }
+.book-analyzer .distribution li { padding: .375rem .625rem; border: 1px solid var(--analyzer-line); border-radius: .5rem; font-size: .875rem; }
+.book-analyzer .error { margin-bottom: .75rem; color: #ffc0d3; }
+.book-analyzer #restore { margin-top: .5rem; }
+.book-analyzer .table-scroll { overflow-x: auto; margin-top: .5rem; }
+.book-analyzer table { width: 100%; border-collapse: collapse; font-size: .875rem; text-align: left; }
+.book-analyzer th, .book-analyzer td { padding: .625rem .75rem; border-bottom: 1px solid var(--analyzer-line); white-space: nowrap; }
+.book-analyzer th { background: var(--analyzer-field); }
+.book-analyzer td img { display: block; max-width: 62px; max-height: 62px; border: 1px solid var(--analyzer-line); }
+.book-analyzer .analysis-note { margin-top: 1.25rem; }
+.book-analyzer dialog { width: min(420px, calc(100% - 32px)); margin: auto; padding: 1.25rem; border: 1px solid var(--analyzer-line); border-radius: .875rem; background: var(--analyzer-panel); color: #f7f7f8; }
+.book-analyzer dialog p { margin-block: .75rem; }
+.book-analyzer dialog::backdrop { background: #080809b3; }
+
+@media (max-width: 700px) {
+  .book-analyzer { width: calc(100% - 32px); }
+  .book-analyzer .workspace { grid-template-columns: 1fr; gap: .875rem; }
+}
+
+@media (max-width: 370px) {
+  .book-analyzer .fields { grid-template-columns: 1fr; }
+}

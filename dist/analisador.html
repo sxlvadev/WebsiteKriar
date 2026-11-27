@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Analise seu PDF e calcule o preço de impressão de livros na Gráfica Kriar.">
+  <title>Analisador de PDFs | Gráfica Kriar</title>
+  <link rel="icon" href="assets/icone-oficial.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="analisador/style.css">
+  <script type="module" src="analisador/js/app.js"></script>
+</head>
+<body class="antialiased">
+  <a class="skip" href="#conteudo">Pular para o conteúdo</a>
+  <header class="site-header sticky top-0 z-50"><a href="index.html" aria-label="Gráfica Kriar — início"><span class="brand-lockup" role="img" aria-label="Gráfica Kriar"><img class="brand-icon" src="assets/icone-oficial.png" width="2048" height="1987" alt=""><img class="brand-wordmark" src="assets/nome-horizontal-v2.png" width="2048" height="303" alt="" aria-hidden="true"></span></a><nav aria-label="Principal"><a class="hover-line menu-link" href="catalogo.html">Catálogo</a><a class="hover-line menu-link" href="index.html#servicos">Serviços</a><a class="hover-line menu-link" href="index.html#processo">Como funciona</a><a class="hover-line menu-link" href="sobre.html">Quem somos</a></nav><div class="nav-actions"><a class="button yellow nav-quote" href="index.html#orcamento" aria-label="Monte seu orçamento"><span class="nav-quote-full">Monte seu orçamento</span><span class="nav-quote-short" aria-hidden="true">Orçamento</span></a><a class="button yellow nav-whatsapp" data-contact="whatsapp" href="https://wa.me/5598988300419" target="_blank" rel="noopener noreferrer" aria-label="Falar com a Gráfica Kriar pelo WhatsApp" title="Falar pelo WhatsApp"><svg class="nav-whatsapp-icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 11.8a8.6 8.6 0 0 1-12.7 7.6L3 21l1.6-4.7A8.6 8.6 0 1 1 20.5 11.8Z"/><path d="m8.1 7.5 1.5-.1 1 2.3-1.1 1.2a7.2 7.2 0 0 0 3.5 3.5l1.2-1.1 2.3 1-.1 1.5c-.1 1-1.3 1.7-2.4 1.4-3.7-1-6.5-3.8-7.5-7.5-.3-1.1.4-2.3 1.6-2.2Z"/></svg></a></div></header>
+  <main class="book-analyzer" id="conteudo">
+    <div class="intro">
+      <a class="analyzer-back" href="catalogo.html">Voltar ao catálogo</a>
+      <h1>Analisador de PDFs</h1>
+      <p>Meça o preenchimento das páginas e calcule o preço de impressão dos livros.</p>
+      <p id="calibration" hidden></p>
+    </div>
+    <div class="workspace">
+      <section class="panel" aria-labelledby="file-heading">
+        <h2 id="file-heading">Arquivo PDF</h2>
+        <div class="dropzone" id="dropzone">
+          <span class="file-mark" aria-hidden="true">PDF</span>
+          <p id="file-name">Arraste o PDF para cá</p>
+          <p id="file-detail" class="muted"></p>
+          <div class="actions">
+            <button type="button" id="choose">Selecionar PDF</button>
+            <button type="button" id="remove" class="quiet" hidden>Remover</button>
+          </div>
+          <input id="file" type="file" accept=".pdf,application/pdf" hidden>
+        </div>
+        <p class="muted privacy">O arquivo fica no navegador durante a análise.</p>
+      </section>
+      <section class="panel print-panel" aria-labelledby="print-heading">
+        <h2 id="print-heading">Configuração de impressão</h2>
+        <form id="settings">
+          <div class="fields">
+            <label>Impressora<select id="printer"><option value="canon">Canon C3226i · GPR-53</option><option value="epson">Epson WF-7310 · bulk</option></select></label>
+            <label>Formato<select id="paper"><option>A4</option><option>A3</option></select></label>
+            <label>Modo<select id="mode"><option value="simplex">Somente frente</option><option value="duplex">Frente e verso</option></select></label>
+            <label>Livros<input id="copies" type="number" value="1" min="1" step="1" required inputmode="numeric" aria-describedby="quantity-note"></label>
+          </div>
+          <p class="muted print-note">Uma página por lado, com ajuste proporcional ao papel.</p>
+          <p class="muted" id="quantity-note" aria-live="polite"></p>
+          <button class="primary" id="analyze" type="submit" disabled>Analisar PDF</button>
+          <button type="button" id="cancel" hidden>Cancelar análise</button>
+        </form>
+      </section>
+    </div>
+    <div class="notice" id="status-panel" hidden>
+      <p id="status" role="status"></p>
+      <progress id="progress" aria-label="Progresso da análise" hidden></progress>
+      <button id="contact" type="button" hidden>Falar com a gráfica</button>
+    </div>
+    <section class="panel result" id="results" aria-labelledby="results-heading" hidden>
+      <div class="section-head">
+        <div><h2 id="results-heading">Resultado da análise</h2><p id="counts" class="muted"></p></div>
+        <div class="actions">
+          <button id="csv" type="button">Exportar CSV</button>
+          <button id="json" type="button">Exportar JSON</button>
+        </div>
+      </div>
+      <div id="complete-summary" hidden>
+        <div class="metrics">
+          <div><span>Média das categorias</span><strong id="average"></strong></div>
+          <div><span>Categoria automática</span><strong id="automatic"></strong></div>
+          <div><span>Folhas por exemplar</span><strong id="sheets"></strong><small id="sheet-detail"></small></div>
+          <div><span>Preço por livro</span><strong id="sale-per-copy"></strong></div>
+          <div class="total"><span>Preço total</span><strong id="sale-total"></strong></div>
+        </div>
+        <p id="pricing-error" role="status" class="error" hidden></p>
+        <div class="summary-bottom">
+          <div><h3>Distribuição por categoria</h3><ul id="distribution" class="distribution"></ul></div>
+          <div>
+            <label>Categoria aplicada<select id="override"><option value="">Usar classificação automática</option><option value="5">5,0%</option><option value="20">20,0%</option><option value="50">50,0%</option><option value="100">100,0%</option></select></label>
+            <p id="applied" class="muted"></p>
+            <button id="restore" type="button" hidden>Restaurar automática</button>
+          </div>
+        </div>
+      </div>
+      <h3>Detalhes por página</h3>
+      <div class="table-scroll" tabindex="0" role="region" aria-label="Métricas por página">
+        <table>
+          <thead><tr><th>Miniatura</th><th>Página</th><th>Área (A)</th><th>Intensidade (I)</th><th>Índice visual (V)</th><th>Categoria</th></tr></thead>
+          <tbody id="rows"></tbody>
+        </table>
+      </div>
+    </section>
+    <div class="analysis-note">
+      <p>Análise visual estimada. Capa, acabamento, preparação e taxas de venda são calculados à parte.</p>
+    </div>
+
+    <dialog id="contact-dialog" aria-labelledby="contact-heading">
+    <h2 id="contact-heading">Atendimento da gráfica</h2>
+    <p id="contact-detail"></p>
+    <form method="dialog"><button>Fechar</button></form>
+  </dialog>
+  </main>
+  <footer><div><span class="brand-lockup" role="img" aria-label="Gráfica Kriar"><img class="brand-icon" src="assets/icone-oficial.png" width="2048" height="1987" alt=""><img class="brand-wordmark" src="assets/nome-horizontal-v2.png" width="2048" height="303" alt="" aria-hidden="true"></span><p>Sua gráfica de impressões rápidas<br>e brindes personalizados.</p><p class="company-registration" data-cnpj>CNPJ: 69.850.948/0001-32</p></div><div class="footer-links"><a class="footer-link" href="catalogo.html">Catálogo de produtos</a><a class="footer-link" href="index.html#servicos">Nossos serviços</a><a class="footer-link" href="index.html#orcamento">Monte seu orçamento</a><a class="footer-link" href="sobre.html">Quem somos</a><a class="footer-link" href="privacidade.html">Política de privacidade</a><div class="social-links" aria-label="Contatos da Gráfica Kriar"><a class="social-link" data-contact="instagram" aria-label="Instagram" title="Instagram" target="_blank" rel="noopener noreferrer" hidden><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".7" fill="currentColor" stroke="none"/></svg></a><a class="social-link" data-contact="maps" aria-label="Localização no Google Maps" title="Localização no Google Maps" target="_blank" rel="noopener noreferrer" hidden><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></a><a class="social-link" data-contact="whatsapp" aria-label="Fale pelo WhatsApp" title="Fale pelo WhatsApp" target="_blank" rel="noopener noreferrer" hidden><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 11.8a8.6 8.6 0 0 1-12.7 7.6L3 21l1.6-4.7A8.6 8.6 0 1 1 20.5 11.8Z"/><path d="m8.1 7.5 1.5-.1 1 2.3-1.1 1.2a7.2 7.2 0 0 0 3.5 3.5l1.2-1.1 2.3 1-.1 1.5c-.1 1-1.3 1.7-2.4 1.4-3.7-1-6.5-3.8-7.5-7.5-.3-1.1.4-2.3 1.6-2.2Z"/></svg></a></div></div><div class="footer-bottom"><p>© <span id="year">2026</span> Gráfica <span class="brand-color">Kriar</span>. Todos os direitos reservados. <span class="footer-separator">|</span> <span class="footer-credit">Desenvolvido por sxlvadev</span></p></div></footer>
+  <script src="contacts.js"></script>
+  <script src="site-info.js"></script>
+</body>
+</html>

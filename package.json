@@ -1,14 +1,19 @@
 {
   "name": "grafica-kriar",
   "private": true,
+  "type": "module",
   "scripts": {
-    "build": "tailwindcss -i ./src/input.css -o ./dist/style.css --minify",
+    "build": "tailwindcss -i ./src/input.css -o ./dist/style.css --minify && node scripts/copy-pdfjs.mjs",
+    "test": "node --test test/analisador.test.js",
     "prepreview": "npm run build",
     "preview": "node scripts/preview.cjs",
     "watch:css": "tailwindcss -i ./src/input.css -o ./dist/style.css --watch"
   },
   "devDependencies": {
-    "tailwindcss": "^4.3.0",
-    "@tailwindcss/cli": "^4.3.0"
+    "@tailwindcss/cli": "^4.3.0",
+    "tailwindcss": "^4.3.0"
+  },
+  "dependencies": {
+    "pdfjs-dist": "5.7.284"
   }
 }
