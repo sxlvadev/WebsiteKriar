@@ -28,7 +28,7 @@ const fileSize = (bytes) => {
 if (analysisConfig) byId("file-detail").textContent = fileLimits();
 if (analysisConfig && analysisConfig !== defaultConfig) {
   const calibration = byId("calibration");
-  calibration.textContent = `Calibra��o local � ${analysisConfig.longEdgePixels} px no lado maior � toler�ncia ao branco de ${analysisConfig.whiteTolerance}`;
+  calibration.textContent = `Calibração local · ${analysisConfig.longEdgePixels} px no lado maior · tolerância ao branco de ${analysisConfig.whiteTolerance}`;
   calibration.hidden = false;
 }
 
@@ -41,7 +41,7 @@ let summary;
 let pricing;
 
 function fileLimits() {
-  return `At� ${mib(analysisConfig.maxFileBytes)} MiB e ${analysisConfig.maxPages} p�ginas`;
+  return `Até ${mib(analysisConfig.maxFileBytes)} MiB e ${analysisConfig.maxPages} páginas`;
 }
 
 function settings() {
@@ -68,8 +68,8 @@ function updateResults() {
     const tier = getBookTier(currentSettings.copies);
     copies.setCustomValidity("");
     quantityNote.textContent = summary
-      ? `Faixa de pre�o � ${tier.label}`
-      : `Faixa de pre�o � ${tier.label}. Analise o PDF para calcular o pre�o.`;
+      ? `Faixa de preço · ${tier.label}`
+      : `Faixa de preço · ${tier.label}. Analise o PDF para calcular o preço.`;
   } catch (error) {
     copies.setCustomValidity(error.message);
     quantityNote.textContent = error.message;
@@ -105,7 +105,7 @@ function showStatus(message, { busy = false, error = false, contact = false } = 
 function updateControls() {
   byId("analyze").disabled = !file;
   byId("analyze").hidden = Boolean(controller);
-  byId("analyze").textContent = summary ? "Simular novamente" : "Simular impress�o";
+  byId("analyze").textContent = summary ? "Simular novamente" : "Simular impressão";
   byId("cancel").hidden = !controller;
   byId("remove").hidden = !file;
   byId("choose").textContent = file ? "Trocar PDF" : "Selecionar PDF";
@@ -138,7 +138,7 @@ async function runAnalysis(event) {
   controller = run;
   updateControls();
   progress.removeAttribute("value");
-  showStatus("Abrindo PDF.", { busy: true });
+  showStatus("Abrindo PDF…", { busy: true });
   try {
     await analyzePdf(file, analysisConfig, run.signal, (total, page) => {
       totalPages = total;
@@ -148,7 +148,7 @@ async function runAnalysis(event) {
       }
       progress.max = total;
       progress.value = pages.length;
-      showStatus(`${pages.length} de ${total} p�ginas analisadas`, { busy: true });
+      showStatus(`${pages.length} de ${total} páginas analisadas`, { busy: true });
     });
     if (controller !== run) return;
     summary = classifyDocument(pages);
@@ -158,11 +158,11 @@ async function runAnalysis(event) {
     if (controller !== run) return;
     if (run.signal.aborted) {
       resetResults();
-      showStatus("An�lise cancelada.");
+      showStatus("Análise cancelada.");
     } else {
       errors = error.pageNumber ? 1 : 0;
       updateResults();
-      const message = error instanceof AnalysisError ? error.message : "N�o foi poss�vel ler este PDF. Confira o arquivo e tente novamente.";
+      const message = error instanceof AnalysisError ? error.message : "Não foi possível ler este PDF. Confira o arquivo e tente novamente.";
       showStatus(message, { error: true, contact: true });
     }
   } finally {
@@ -206,7 +206,7 @@ byId("contact").addEventListener("click", () => {
     window.open(contactUrl, "_blank", "noopener,noreferrer");
     return;
   }
-  byId("contact-detail").textContent = "Pe�a uma confer�ncia pelo canal habitual da Gr�fica Kriar e anexe o PDF na conversa.";
+  byId("contact-detail").textContent = "Peça uma conferência pelo canal habitual da Gráfica Kriar e anexe o PDF na conversa.";
   byId("contact-dialog").showModal();
 });
 byId("csv").addEventListener("click", () => { if (summary) exportCsv(pages); });

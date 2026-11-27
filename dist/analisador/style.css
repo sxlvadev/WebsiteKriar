@@ -90,7 +90,7 @@
   .book-analyzer .fields { grid-template-columns: 1fr; }
 }
 
-/* Simulador de impress�es: identidade Kriar, sem bordas. */
+/* Simulador de impressões: identidade Kriar, sem bordas. */
 .book-analyzer { width:min(1280px,89%); padding-bottom:clamp(3rem,7vw,6rem); --analyzer-field:#1c1c21; }
 .book-analyzer .intro { max-width:850px; padding-block:clamp(2.5rem,6vw,5rem) 2.75rem; margin:0; }
 .book-analyzer .analyzer-back { display:inline-flex; min-height:44px; align-items:center; margin-bottom:1.75rem; color:#b8b8bf; font-size:.875rem; text-decoration-color:transparent; transition:color .2s,text-decoration-color .2s; }
