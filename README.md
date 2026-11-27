@@ -4,7 +4,7 @@ Site estático com Tailwind CSS.
 
 ## Analisador de PDFs
 
-O botão **Calcular impressão de livros** do catálogo abre `/analisador.html`. A página usa o cabeçalho, as cores e os contatos do site. O código do analisador fica em `dist/analisador/js/` e o PDF é processado no navegador.
+O botão **Simular preço da impressão**, na seção **Impressão de livros** do catálogo, abre `/analisador.html`. A página usa o cabeçalho, as cores e os contatos do site. O código do analisador fica em `dist/analisador/js/` e o PDF é processado no navegador.
 
 Para testar no Windows:
 
