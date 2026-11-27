@@ -139,6 +139,16 @@ async function runAnalysis(event) {
   updateControls();
   progress.removeAttribute("value");
   showStatus("Abrindo PDF…", { busy: true });
+  requestAnimationFrame(() => {
+    const panel = byId("status-panel");
+    if (controller !== run || panel.hidden) return;
+    const headerHeight = document.querySelector(".site-header")?.getBoundingClientRect().height ?? 0;
+    const top = Math.max(0, window.scrollY + panel.getBoundingClientRect().top - headerHeight - 24);
+    window.scrollTo({
+      top,
+      behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth",
+    });
+  });
   try {
     await analyzePdf(file, analysisConfig, run.signal, (total, page) => {
       totalPages = total;
