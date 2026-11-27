@@ -3,14 +3,13 @@ import { analyzePdf, AnalysisError, pdfjsVersion } from "./pdf-renderer.js";
 import { classifyDocument } from "./document-classifier.js";
 import { categoryLimits } from "./page-classifier.js";
 import { calculateBookPricing, getBookTier } from "./price-calculator.js";
-import { appendPage, showResults } from "./results-view.js";
+import { showResults } from "./results-view.js";
 import { exportCsv, exportJson } from "./export-results.js";
 
 const byId = (id) => document.getElementById(id);
 const fileInput = byId("file");
 const dropzone = byId("dropzone");
 const progress = byId("progress");
-const override = byId("override");
 let analysisConfig;
 try {
   analysisConfig = getAnalysisConfig(window.location);
@@ -53,14 +52,9 @@ function settings() {
   };
 }
 
-function manualCategory() {
-  return override.value ? Number(override.value) : null;
-}
-
 function updateResults() {
   let pricingError = "";
   pricing = null;
-  const manual = manualCategory();
   const currentSettings = settings();
   const copies = byId("copies");
   const quantityNote = byId("quantity-note");
@@ -76,12 +70,12 @@ function updateResults() {
   }
   if (summary && copies.validity.valid) {
     try {
-      pricing = calculateBookPricing(totalPages, manual ?? summary.automaticCategory, currentSettings);
+      pricing = calculateBookPricing(totalPages, summary.automaticCategory, currentSettings);
     } catch (error) {
       pricingError = error.message;
     }
   }
-  showResults({ totalPages, analyzed: pages.length, errors, summary, manual, pricing, pricingError });
+  showResults({ totalPages, analyzed: pages.length, errors, summary, pricing, pricingError });
 }
 
 function resetResults() {
@@ -89,8 +83,6 @@ function resetResults() {
   totalPages = 0;
   errors = 0;
   summary = null;
-  override.value = "";
-  byId("rows").replaceChildren();
   updateResults();
 }
 
@@ -154,7 +146,6 @@ async function runAnalysis(event) {
       totalPages = total;
       if (page) {
         pages.push(page);
-        appendPage(page);
       }
       progress.max = total;
       progress.value = pages.length;
@@ -205,12 +196,6 @@ dropzone.addEventListener("drop", (event) => {
 byId("settings").addEventListener("submit", runAnalysis);
 byId("settings").addEventListener("input", updateResults);
 byId("cancel").addEventListener("click", () => controller?.abort());
-override.addEventListener("change", updateResults);
-byId("restore").addEventListener("click", () => {
-  override.value = "";
-  updateResults();
-  override.focus();
-});
 byId("contact").addEventListener("click", () => {
   if (contactUrl) {
     window.open(contactUrl, "_blank", "noopener,noreferrer");
@@ -222,7 +207,7 @@ byId("contact").addEventListener("click", () => {
 byId("csv").addEventListener("click", () => { if (summary) exportCsv(pages); });
 byId("json").addEventListener("click", () => {
   if (summary && pricing) exportJson({
-    file, pages, settings: settings(), summary, manual: manualCategory(), pricing,
+    file, pages, settings: settings(), summary, manual: null, pricing,
     analysis: { ...analysisConfig, pdfjsVersion, categoryLimits, visualIndexDecimalPlaces: 0 },
   });
 });

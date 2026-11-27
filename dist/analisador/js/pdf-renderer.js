@@ -85,13 +85,8 @@ export async function analyzePdf(file, config, signal, onProgress) {
         signal.throwIfAborted();
         if (streamFailure) throw new Error(streamFailure.message);
         const metrics = measurePixels(context.getImageData(0, 0, canvas.width, canvas.height).data, config.whiteTolerance);
-        const thumbnail = window.document.createElement("canvas");
-        const thumbnailScale = 110 / Math.max(canvas.width, canvas.height);
-        thumbnail.width = Math.max(1, Math.round(canvas.width * thumbnailScale));
-        thumbnail.height = Math.max(1, Math.round(canvas.height * thumbnailScale));
-        thumbnail.getContext("2d").drawImage(canvas, 0, 0, thumbnail.width, thumbnail.height);
         onProgress(document.numPages, {
-          number, ...metrics, ...classifyPage(metrics.visualIndex), thumbnail: thumbnail.toDataURL("image/webp"),
+          number, ...metrics, ...classifyPage(metrics.visualIndex),
         });
       } catch (error) {
         signal.throwIfAborted();

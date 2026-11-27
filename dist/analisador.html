@@ -68,28 +68,13 @@
       </div>
       <div id="complete-summary" hidden>
         <div class="metrics">
-          <div><span>Média das categorias</span><strong id="average"></strong></div>
-          <div><span>Categoria automática</span><strong id="automatic"></strong></div>
           <div><span>Folhas por exemplar</span><strong id="sheets"></strong><small id="sheet-detail"></small></div>
           <div><span>Por exemplar</span><strong id="sale-per-copy"></strong></div>
           <div class="total"><span>Total estimado</span><strong id="sale-total"></strong></div>
         </div>
         <p id="pricing-error" role="status" class="error" hidden></p>
-        <div class="summary-bottom">
-          <div><h3>Distribuição por categoria</h3><ul id="distribution" class="distribution"></ul></div>
-          <div>
-            <label>Categoria aplicada<select id="override"><option value="">Usar classificação automática</option><option value="5">5,0%</option><option value="20">20,0%</option><option value="50">50,0%</option><option value="100">100,0%</option></select></label>
-            <p id="applied" class="muted"></p>
-            <button id="restore" type="button" hidden>Restaurar automática</button>
-          </div>
-        </div>
-      </div>
-      <h3>Detalhes por página</h3>
-      <div class="table-scroll" tabindex="0" role="region" aria-label="Métricas por página">
-        <table>
-          <thead><tr><th>Miniatura</th><th>Página</th><th>Área (A)</th><th>Intensidade (I)</th><th>Índice visual (V)</th><th>Categoria</th></tr></thead>
-          <tbody id="rows"></tbody>
-        </table>
+        <h3>Resumo do índice visual do documento</h3>
+        <ul id="distribution" class="distribution" aria-label="Quantidade de páginas por categoria"></ul>
       </div>
     </section>
     <div class="analysis-note">
