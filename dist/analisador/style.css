@@ -164,3 +164,51 @@
 @media(max-width:540px) { .book-analyzer{width:calc(100% - 32px)} .book-analyzer .panel{border-radius:1.25rem} .book-analyzer .panel-heading{gap:.75rem} .book-analyzer .metrics{grid-template-columns:repeat(2,minmax(0,1fr))} .book-analyzer .metrics > div:nth-child(n+3){grid-column:span 2} .book-analyzer .result .actions{justify-content:flex-start} }
 @media(max-width:380px) { .book-analyzer .fields{grid-template-columns:1fr} }
 @media(prefers-reduced-motion:reduce) { .book-analyzer *{transition:none} .book-analyzer button:hover:not(:disabled){transform:none} }
+
+/* Hover compartilhado: linha amarela que surge do centro. */
+.book-analyzer .analyzer-back {
+  position: relative;
+  color: #f7f7f8;
+  text-decoration: none;
+}
+.book-analyzer .analyzer-back::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: .35rem;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--yellow);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform .25s ease;
+}
+.book-analyzer .analyzer-back:hover::after,
+.book-analyzer .analyzer-back:focus-visible::after { transform: scaleX(1); }
+
+/* Progresso com as cores da Kriar em motores WebKit/Blink e Firefox. */
+.book-analyzer progress {
+  --progress-colors: linear-gradient(90deg, var(--cyan) 0%, var(--pink) 55%, var(--yellow) 100%);
+  appearance: none;
+  -webkit-appearance: none;
+  display: block;
+  width: 100%;
+  height: 10px;
+  padding: 0;
+  border-radius: 999px;
+  overflow: hidden;
+  background: #24242b;
+  accent-color: var(--cyan);
+}
+.book-analyzer progress::-webkit-progress-bar { background: #24242b; border-radius: 999px; }
+.book-analyzer progress::-webkit-progress-value { background: var(--progress-colors); border-radius: 999px; }
+.book-analyzer progress::-moz-progress-bar { background: var(--progress-colors); border-radius: 999px; }
+.book-analyzer progress:indeterminate { background: var(--progress-colors); background-size: 200% 100%; animation: kriar-progress-loading 1.8s ease-in-out infinite alternate; }
+.book-analyzer progress:indeterminate::-webkit-progress-bar { background: transparent; }
+@keyframes kriar-progress-loading { from { background-position: 0% 50%; } to { background-position: 100% 50%; } }
+@media (prefers-reduced-motion: reduce) {
+  .book-analyzer .analyzer-back::after { transition: none; }
+  .book-analyzer progress:indeterminate { animation: none; }
+}
+
